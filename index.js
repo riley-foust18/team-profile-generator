@@ -1,5 +1,6 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
+const generatePage = require("./src/page-template.js");
 
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
@@ -183,10 +184,23 @@ const promptEmployee = () => {
   })
 };
 
-
+function writeToFile(data) {
+  fs.writeFile("./dist/index.html", data, err => {
+    if (err) {
+      return console.log(err);
+    }
+    console.log('Success!');
+  });
+}
 
 promptManager()
   .then(promptEmployee)
   .then(teamArr => {
-    
+    return generatePage(teamArr);
+  })
+  .then(pageHTML => {
+    return writeToFile(pageHTML);
+  })
+  .catch(err => {
+    console.log(err)
   })
