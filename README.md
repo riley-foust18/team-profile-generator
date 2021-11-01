@@ -22,6 +22,7 @@
   ## Usage 
 
   Inintialize with node index.js. Walk through video [here](https://watch.screencastify.com/v/eRlXKJwW0sYy3ZQKpjFh)
+  ![](./images/team-profile.png)
 
   ## License
 
