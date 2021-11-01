@@ -3,7 +3,7 @@ const createManager = manager => {
     <div class="shadow col-2 flex-column m-2 p-0">
       <div class="bg-info px-2 pb-1">
         <h2>${manager.name}</h2>
-        <h3>${manager.role}</h3>
+        <h3>Manager</h3>
       </div>
 
       <div class="flex-wrap flex-column p-0">
@@ -22,7 +22,7 @@ const createEngineer = engineer => {
     <div class="shadow col-2 flex-column m-2 p-0">
       <div class="bg-info px-2 pb-1">
         <h2>${engineer.name}</h2>
-        <h3>${engineer.role}</h3>
+        <h3>Engineer</h3>
       </div>
 
       <div class="flex-wrap flex-column p-0">
@@ -41,7 +41,7 @@ const createIntern = intern => {
     <div class="shadow col-2 flex-column m-2 p-0">
       <div class="bg-info px-2 pb-1">
         <h2>${intern.name}</h2>
-        <h3>${intern.role}</h3>
+        <h3>Intern</h3>
       </div>
 
       <div class="flex-wrap flex-column p-0">
@@ -61,6 +61,7 @@ generatePage = data => {
   for (let i = 0; i < data.length; i++) {
     const employee = data[i];
     const role = employee.getRole(); 
+    console.log(role);
     
     if (role === "Manager") {
       const managerBox = createManager(employee);
