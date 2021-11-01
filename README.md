@@ -21,7 +21,7 @@
 
   ## Usage 
 
-  Inintialize with node index.js. Walk through video here -> https://watch.screencastify.com/v/w6gVqNqo0Ci7Fszz7Qee
+  Inintialize with node index.js. Walk through video [here](https://watch.screencastify.com/v/w6gVqNqo0Ci7Fszz7Qee)
 
   ## License
 
